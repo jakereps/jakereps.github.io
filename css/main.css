@@ -1,15 +1,42 @@
+/*
+Seriously... Don't look at this... I can make a page look decent, but I
+don't know how to make CSS look decent for shit.
+*/
 html,
 body {
   height: 100vh;
   width: 100vw; }
 
 #landing {
-  height: 75vh;
+  height: 85vh;
   background: url("../img/splash.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center; }
+  #landing nav {
+    position: absolute;
+    top: 0;
+    width: 95vw;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 243, 0.25); }
+    #landing nav > ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      #landing nav > ul li {
+        display: inline-block;
+        padding: 20px;
+        font-family: monospace; }
+        #landing nav > ul li a {
+          color: #FFFFF3;
+          text-decoration: none; }
+          #landing nav > ul li a:hover {
+            color: #566270; }
+        @media screen and (max-width: 940px) {
+          #landing nav > ul li {
+            font-size: 12px;
+            padding: 20px 10px; } }
   #landing #name {
     font-family: "Ubuntu", sans-serif;
     font-size: 36px;
@@ -47,6 +74,7 @@ body {
     width: 25%;
     float: left; }
     #aboutme #me img {
+      margin-top: 15px;
       width: 250px;
       border: 5px solid #FFFFF3; }
     @media screen and (max-width: 940px) {
@@ -55,11 +83,11 @@ body {
         float: none;
         padding: 0; }
         #aboutme #me img {
+          width: 200px;
           display: block;
           margin: 0 auto; } }
   #aboutme #blurb {
     width: 75%;
-    height: 100%;
     float: right;
     font-family: "Lora", serif;
     color: #566270; }
@@ -67,7 +95,7 @@ body {
       font-family: "Ubuntu", sans-serif;
       font-weight: 300;
       text-transform: uppercase;
-      border-left: 3px solid #A593E0;
+      border-left: 5px solid #A593E0;
       padding-left: 5px; }
     #aboutme #blurb p, #aboutme #blurb h1 {
       margin-left: 75px; }
@@ -81,27 +109,32 @@ body {
         #aboutme #blurb p, #aboutme #blurb h1 {
           margin-left: 0; } }
 
-nav {
-  position: absolute;
-  top: 0;
-  text-align: center; }
-  nav > ul {
-    padding: 0;
-    margin: 0;
-    list-style: none; }
-    nav > ul li {
+#contact {
+  background-color: #566270; }
+  #contact .content {
+    min-height: 33vh;
+    text-align: center; }
+    #contact .content h1 {
+      margin: 0;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #E0E3DA;
+      padding-top: 20px; }
+    #contact .content ul {
+      padding: 0;
+      list-style: none;
+      padding: 25px; }
+    #contact .content ul li {
       display: inline-block;
-      padding: 20px;
-      font-family: monospace; }
-      nav > ul li a {
-        color: #FFFFF3;
-        text-decoration: none; }
-        nav > ul li a:hover {
-          color: #566270; }
+      padding: 50px; }
       @media screen and (max-width: 940px) {
-        nav > ul li {
-          font-size: 12px;
-          padding: 20px 10px; } }
+        #contact .content ul li {
+          padding: 40px; } }
+      #contact .content ul li a i:hover {
+        color: #A593E0; }
+    #contact .content .fa {
+      color: #E0E3DA; }
 
 /* ubuntu-300 - latin */
 @font-face {

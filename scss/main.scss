@@ -9,6 +9,11 @@ $dark: #566270;
 
 $mobilebreak: 940px;
 
+/*
+Seriously... Don't look at this... I can make a page look decent, but I
+don't know how to make CSS look decent for shit.
+*/
+
 html,
 body {
   height: 100vh;
@@ -16,12 +21,46 @@ body {
 }
 
 #landing {
-  height: 75vh;
+  height: 85vh;
   background: url('../img/splash.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  nav {
+    position: absolute;
+    top: 0;
+    width: 95vw;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,243, 0.25);
+
+    > ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        padding: 20px;
+        font-family: monospace;
+
+        a {
+          color: $light;
+          text-decoration: none;
+
+          &:hover {
+            color: $dark;
+          }
+        }
+
+        @media screen and (max-width: $mobilebreak) {
+            font-size: 12px;
+            padding: 20px 10px;
+        }
+      }
+    }
+  }
 
   #name {
     font-family: $heading;
@@ -61,7 +100,6 @@ body {
   background-color: $tan;
   margin: 0 auto;
   padding: 25px;
-
   .content {
     min-height: 33vh;
   }
@@ -71,6 +109,7 @@ body {
     float: left;
 
     img {
+      margin-top: 15px;
       width: 250px;
       border: 5px solid $light;
     }
@@ -79,7 +118,9 @@ body {
       width: 100%;
       float: none;
       padding: 0;
+
       img {
+        width: 200px;
         display: block;
         margin: 0 auto;
       }
@@ -88,7 +129,6 @@ body {
 
   #blurb {
     width: 75%;
-    height: 100%;
     float: right;
     font-family: $normal;
     color: $dark;
@@ -97,7 +137,7 @@ body {
       font-family: $heading;
       font-weight: 300;
       text-transform: uppercase;
-      border-left: 3px solid $purp;
+      border-left: 5px solid $purp;
       padding-left: 5px;
     }
 
@@ -119,34 +159,43 @@ body {
   }
 }
 
-nav {
-  position: absolute;
-  top: 0;
-  text-align: center;
+#contact {
+  background-color: $dark;
 
-  > ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  .content {
+    min-height: 33vh;
+    text-align: center;
 
-    li {
+    h1 {
+      margin: 0;
+      font-family: $heading;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $tan;
+      padding-top: 20px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      padding: 25px;
+    }
+
+    ul li {
       display: inline-block;
-      padding: 20px;
-      font-family: monospace;
-
-      a {
-        color: $light;
-        text-decoration: none;
-
-        &:hover {
-          color: $dark;
-        }
-      }
+      padding: 50px;
 
       @media screen and (max-width: $mobilebreak) {
-          font-size: 12px;
-          padding: 20px 10px;
+        padding: 40px;
       }
+
+      a i:hover {
+        color: $purp;
+      }
+    }
+
+    .fa {
+      color: $tan;
     }
   }
 }
