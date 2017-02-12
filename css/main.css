@@ -1,0 +1,197 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw; }
+
+#landing {
+  height: 75vh;
+  background: url("../img/splash.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #landing #name {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 36px;
+    color: #E0E3DA;
+    text-align: center;
+    padding: 25px 75px;
+    background: rgba(86, 98, 112, 0.45);
+    border: 5px solid #FFFFF3;
+    transition: font-size 0.25s ease-in; }
+    #landing #name span {
+      margin-top: 5px;
+      padding: 5px;
+      border-top: 1px solid #A593E0;
+      display: block;
+      font-size: 18px; }
+      @media screen and (max-width: 940px) {
+        #landing #name span {
+          font-size: 12px; } }
+    @media screen and (max-width: 940px) {
+      #landing #name {
+        font-size: 24px; } }
+
+.content {
+  width: 1024px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+#aboutme {
+  background-color: #E0E3DA;
+  margin: 0 auto;
+  padding: 25px; }
+  #aboutme .content {
+    min-height: 33vh; }
+  #aboutme #me {
+    width: 25%;
+    float: left; }
+    #aboutme #me img {
+      width: 250px;
+      border: 5px solid #FFFFF3; }
+    @media screen and (max-width: 940px) {
+      #aboutme #me {
+        width: 100%;
+        float: none;
+        padding: 0; }
+        #aboutme #me img {
+          display: block;
+          margin: 0 auto; } }
+  #aboutme #blurb {
+    width: 75%;
+    height: 100%;
+    float: right;
+    font-family: "Lora", serif;
+    color: #566270; }
+    #aboutme #blurb h1 {
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-left: 3px solid #A593E0;
+      padding-left: 5px; }
+    #aboutme #blurb p, #aboutme #blurb h1 {
+      margin-left: 75px; }
+    @media screen and (max-width: 940px) {
+      #aboutme #blurb {
+        width: 100%;
+        float: none; }
+        #aboutme #blurb h1 {
+          margin-top: 24px;
+          font-size: 18px; }
+        #aboutme #blurb p, #aboutme #blurb h1 {
+          margin-left: 0; } }
+
+nav {
+  position: absolute;
+  top: 0;
+  text-align: center; }
+  nav > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    nav > ul li {
+      display: inline-block;
+      padding: 20px;
+      font-family: monospace; }
+      nav > ul li a {
+        color: #FFFFF3;
+        text-decoration: none; }
+        nav > ul li a:hover {
+          color: #566270; }
+      @media screen and (max-width: 940px) {
+        nav > ul li {
+          font-size: 12px;
+          padding: 20px 10px; } }
+
+/* ubuntu-300 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/ubuntu-v9-latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url("../fonts/ubuntu-v9-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-v9-latin-300.woff2") format("woff2"), url("../fonts/ubuntu-v9-latin-300.woff") format("woff"), url("../fonts/ubuntu-v9-latin-300.ttf") format("truetype"), url("../fonts/ubuntu-v9-latin-300.svg#Ubuntu") format("svg");
+  /* Legacy iOS */ }
+/* ubuntu-300italic - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/ubuntu-v9-latin-300italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Ubuntu Light Italic"), local("Ubuntu-LightItalic"), url("../fonts/ubuntu-v9-latin-300italic.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-v9-latin-300italic.woff2") format("woff2"), url("../fonts/ubuntu-v9-latin-300italic.woff") format("woff"), url("../fonts/ubuntu-v9-latin-300italic.ttf") format("truetype"), url("../fonts/ubuntu-v9-latin-300italic.svg#Ubuntu") format("svg");
+  /* Legacy iOS */ }
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ubuntu-v9-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Ubuntu"), url("../fonts/ubuntu-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-v9-latin-regular.woff2") format("woff2"), url("../fonts/ubuntu-v9-latin-regular.woff") format("woff"), url("../fonts/ubuntu-v9-latin-regular.ttf") format("truetype"), url("../fonts/ubuntu-v9-latin-regular.svg#Ubuntu") format("svg");
+  /* Legacy iOS */ }
+/* ubuntu-italic - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/ubuntu-v9-latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Ubuntu Italic"), local("Ubuntu-Italic"), url("../fonts/ubuntu-v9-latin-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-v9-latin-italic.woff2") format("woff2"), url("../fonts/ubuntu-v9-latin-italic.woff") format("woff"), url("../fonts/ubuntu-v9-latin-italic.ttf") format("truetype"), url("../fonts/ubuntu-v9-latin-italic.svg#Ubuntu") format("svg");
+  /* Legacy iOS */ }
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ubuntu-v9-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url("../fonts/ubuntu-v9-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-v9-latin-700.woff2") format("woff2"), url("../fonts/ubuntu-v9-latin-700.woff") format("woff"), url("../fonts/ubuntu-v9-latin-700.ttf") format("truetype"), url("../fonts/ubuntu-v9-latin-700.svg#Ubuntu") format("svg");
+  /* Legacy iOS */ }
+/* ubuntu-700italic - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/ubuntu-v9-latin-700italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Ubuntu Bold Italic"), local("Ubuntu-BoldItalic"), url("../fonts/ubuntu-v9-latin-700italic.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-v9-latin-700italic.woff2") format("woff2"), url("../fonts/ubuntu-v9-latin-700italic.woff") format("woff"), url("../fonts/ubuntu-v9-latin-700italic.ttf") format("truetype"), url("../fonts/ubuntu-v9-latin-700italic.svg#Ubuntu") format("svg");
+  /* Legacy iOS */ }
+/* lora-regular - latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lora-v10-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Lora Regular"), local("Lora-Regular"), url("../fonts/lora-v10-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lora-v10-latin-regular.woff2") format("woff2"), url("../fonts/lora-v10-latin-regular.woff") format("woff"), url("../fonts/lora-v10-latin-regular.ttf") format("truetype"), url("../fonts/lora-v10-latin-regular.svg#Lora") format("svg");
+  /* Legacy iOS */ }
+/* lora-italic - latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/lora-v10-latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Lora Italic"), local("Lora-Italic"), url("../fonts/lora-v10-latin-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/lora-v10-latin-italic.woff2") format("woff2"), url("../fonts/lora-v10-latin-italic.woff") format("woff"), url("../fonts/lora-v10-latin-italic.ttf") format("truetype"), url("../fonts/lora-v10-latin-italic.svg#Lora") format("svg");
+  /* Legacy iOS */ }
+/* lora-700 - latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lora-v10-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Lora Bold"), local("Lora-Bold"), url("../fonts/lora-v10-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/lora-v10-latin-700.woff2") format("woff2"), url("../fonts/lora-v10-latin-700.woff") format("woff"), url("../fonts/lora-v10-latin-700.ttf") format("truetype"), url("../fonts/lora-v10-latin-700.svg#Lora") format("svg");
+  /* Legacy iOS */ }
+/* lora-700italic - latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/lora-v10-latin-700italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Lora Bold Italic"), local("Lora-BoldItalic"), url("../fonts/lora-v10-latin-700italic.eot?#iefix") format("embedded-opentype"), url("../fonts/lora-v10-latin-700italic.woff2") format("woff2"), url("../fonts/lora-v10-latin-700italic.woff") format("woff"), url("../fonts/lora-v10-latin-700italic.ttf") format("truetype"), url("../fonts/lora-v10-latin-700italic.svg#Lora") format("svg");
+  /* Legacy iOS */ }
+
+/*# sourceMappingURL=main.css.map */
