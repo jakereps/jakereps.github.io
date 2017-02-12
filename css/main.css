@@ -77,7 +77,7 @@ body {
   margin: 0 auto;
   padding: 25px; }
   #aboutme .content {
-    min-height: 33vh; }
+    min-height: 300px; }
   #aboutme #me {
     width: 25%;
     float: left; }
