@@ -28,11 +28,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   nav {
     position: absolute;
@@ -109,7 +109,7 @@ body {
   margin: 0 auto;
   padding: 25px;
   .content {
-    min-height: 33vh;
+    min-height: 300px;
   }
 
   #me {
@@ -118,7 +118,6 @@ body {
 
     img {
       margin-top: 15px;
-      width: 250px;
       border: 5px solid $light;
     }
 
@@ -129,6 +128,7 @@ body {
 
       img {
         width: 200px;
+        height: 200px;
         display: block;
         margin: 0 auto;
       }
@@ -167,12 +167,100 @@ body {
   }
 }
 
+#portfolio {
+  background-color: $light;
+  font-family: $normal;
+  color: $dark;
+
+  .content {
+    min-height: 50vh;
+
+    .carousel {
+
+      > span {
+        display: block;
+        padding: 15px 0;
+
+        h1 {
+          font-family: $heading;
+          font-weight: 300;
+          text-transform: uppercase;
+          border-left: 5px solid $purp;
+          padding-left: 5px;
+          margin: 0;
+        }
+      }
+
+      ul {
+        display: inline-block;
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+
+        li {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          float: left;
+          width: calc((100% / 3) - 20px);
+          height: 250px;
+          text-align: center;
+          margin: 5px;
+          background-color: $tan;
+
+          a,
+          a:visited,
+          a:focus {
+            display: block;
+            color: $dark;
+            text-decoration: none;
+
+            > span {
+              font-family: $heading;
+              border-bottom: 1px solid $purp;
+            }
+
+            > div {
+              padding-top: 5px;
+              font-size: 12px;
+              width: 85%;
+              margin: 5px auto 0;
+            }
+
+            &:hover {
+              color: $purp;
+            }
+          }
+
+        }
+        @media screen and (max-width: $mobilebreak) {
+          display: inline-block;
+          li {
+            width: calc(100% - 10px);
+            height: 125px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+
 #contact {
   background-color: $dark;
 
   .content {
-    min-height: 33vh;
-    text-align: center;
+    min-height: 100px;
+    text-align: right;
+    padding: 20px;
 
     h1 {
       margin: 0;
@@ -180,22 +268,19 @@ body {
       font-weight: 300;
       text-transform: uppercase;
       color: $tan;
-      padding-top: 20px;
+      padding-right: 5px;
+      border-right: 5px solid $purp;
     }
 
     ul {
       padding: 0;
+      float: right;
       list-style: none;
-      padding: 25px;
     }
 
     ul li {
       display: inline-block;
-      padding: 50px;
-
-      @media screen and (max-width: $mobilebreak) {
-        padding: 40px;
-      }
+      padding: 10px;
 
       a i:hover {
         color: $purp;

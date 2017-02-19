@@ -83,7 +83,6 @@ body {
     float: left; }
     #aboutme #me img {
       margin-top: 15px;
-      width: 250px;
       border: 5px solid #FFFFF3; }
     @media screen and (max-width: 940px) {
       #aboutme #me {
@@ -92,6 +91,7 @@ body {
         padding: 0; }
         #aboutme #me img {
           width: 200px;
+          height: 200px;
           display: block;
           margin: 0 auto; } }
   #aboutme #blurb {
@@ -117,28 +117,93 @@ body {
         #aboutme #blurb p, #aboutme #blurb h1 {
           margin-left: 0; } }
 
+#portfolio {
+  background-color: #FFFFF3;
+  font-family: "Lora", serif;
+  color: #566270; }
+  #portfolio .content {
+    min-height: 50vh; }
+    #portfolio .content .carousel > span {
+      display: block;
+      padding: 15px 0; }
+      #portfolio .content .carousel > span h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-left: 5px solid #A593E0;
+        padding-left: 5px;
+        margin: 0; }
+    #portfolio .content .carousel ul {
+      display: inline-block;
+      list-style: none;
+      padding: 20px 0;
+      margin: 0; }
+      #portfolio .content .carousel ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        float: left;
+        width: calc((100% / 3) - 20px);
+        height: 250px;
+        text-align: center;
+        margin: 5px;
+        background-color: #E0E3DA; }
+        #portfolio .content .carousel ul li a,
+        #portfolio .content .carousel ul li a:visited,
+        #portfolio .content .carousel ul li a:focus {
+          display: block;
+          color: #566270;
+          text-decoration: none; }
+          #portfolio .content .carousel ul li a > span,
+          #portfolio .content .carousel ul li a:visited > span,
+          #portfolio .content .carousel ul li a:focus > span {
+            font-family: "Ubuntu", sans-serif;
+            border-bottom: 1px solid #A593E0; }
+          #portfolio .content .carousel ul li a > div,
+          #portfolio .content .carousel ul li a:visited > div,
+          #portfolio .content .carousel ul li a:focus > div {
+            padding-top: 5px;
+            font-size: 12px;
+            width: 85%;
+            margin: 5px auto 0; }
+          #portfolio .content .carousel ul li a:hover,
+          #portfolio .content .carousel ul li a:visited:hover,
+          #portfolio .content .carousel ul li a:focus:hover {
+            color: #A593E0; }
+      @media screen and (max-width: 940px) {
+        #portfolio .content .carousel ul {
+          display: inline-block; }
+          #portfolio .content .carousel ul li {
+            width: calc(100% - 10px);
+            height: 125px; } }
+
 #contact {
   background-color: #566270; }
   #contact .content {
-    min-height: 33vh;
-    text-align: center; }
+    min-height: 100px;
+    text-align: right;
+    padding: 20px; }
     #contact .content h1 {
       margin: 0;
       font-family: "Ubuntu", sans-serif;
       font-weight: 300;
       text-transform: uppercase;
       color: #E0E3DA;
-      padding-top: 20px; }
+      padding-right: 5px;
+      border-right: 5px solid #A593E0; }
     #contact .content ul {
       padding: 0;
-      list-style: none;
-      padding: 25px; }
+      float: right;
+      list-style: none; }
     #contact .content ul li {
       display: inline-block;
-      padding: 50px; }
-      @media screen and (max-width: 940px) {
-        #contact .content ul li {
-          padding: 40px; } }
+      padding: 10px; }
       #contact .content ul li a i:hover {
         color: #A593E0; }
     #contact .content .fa {
