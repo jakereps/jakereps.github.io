@@ -149,7 +149,7 @@ body {
         -ms-flex-pack: center;
         justify-content: center;
         float: left;
-        width: calc((100% / 3) - 20px);
+        width: calc((100% / 3) - 10px);
         height: 250px;
         text-align: center;
         margin: 5px;
