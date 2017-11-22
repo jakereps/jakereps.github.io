@@ -1,0 +1,77 @@
+---
+---
+$accent-color: #A593E0;
+$medium-color: #E0E3DA;
+$light-color: #FFFFF3;
+$dark-color: #566270;
+
+
+$font-color: $dark-color;
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $medium-color;
+  overflow: hidden;
+}
+
+p {
+  color: $font-color;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+  #{$a-tags} {
+    color: $dark-color;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  #{$a-tags-hover} {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+.landing {
+  height: 100vh;
+
+  header {
+    height: 450px;
+    background-color: white;
+    -webkit-clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 3vw),
+      0 100%
+    );
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 3vw),
+      0 100%
+    );
+
+    .image {
+      margin: 0 auto;
+      max-width: 300px;
+      padding: 50px;
+
+      .profile {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .about {
+    padding: 50px 5px;
+    margin: 0 auto;
+    max-width: 1048px;
+    width: 80vw;
+  }
+
+
+}
